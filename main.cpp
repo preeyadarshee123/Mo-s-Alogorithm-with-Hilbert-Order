@@ -33,6 +33,14 @@ inline bool operator<(const Query &a,const Query &b){
     return a.ord<b.ord;
 }
 
+
+
+// Arpa's Mo sorting algorithm
+// S = the max integer number which is less than sqrt(N);
+bool cmp(Query A, Query B){
+    if (A.l / S ！= B.l / S) return A.l < B.l;
+    return A.l / S % 2 ? A.r > B.r : A.r < B.r;
+}
 // Code Example in main 
 
 int main()
